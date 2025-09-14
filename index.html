@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PyScript Project</title>
+    <!-- <script defer src="https://pyscript.net/latest/pyscript.js"></script> -->
+    <script type="module" src="https://pyscript.net/releases/2024.5.2/core.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script type="py" src="src/main.py"></script>
+    <style>
+        .blue-border {
+            border: 2px solid blue !important;
+        }
+        #loading {
+            position: fixed;
+            top: 0; left: 0; right: 0; bottom: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: white;
+            z-index: 9999;
+            font-size: 2em;
+        }
+    </style>
+</head>
+<body>
+    <div id="loading">Loading PyScript...</div>
+    <h1>Welcome to the PyScript Project</h1>
+    <input type="text" id="myInput" />
+    <button id="myButton">Change</button>
+    <div id="versionDiv"></div>
+    <canvas id="myChart" width="1400" height="1200"></canvas>
+
+	<canvas id="testChart" width="400" height="400"></canvas>
+    <script>
+        const testCtx = document.getElementById('testChart');
+        new Chart(testCtx, {
+            type: 'bar',
+            data: {
+                labels: ['Test1', 'Test2', 'Test3'],
+                datasets: [{
+                    label: 'Test Data',
+                    data: [10, 20, 30],
+                    backgroundColor: 'rgba(255, 99, 132, 0.2)',
+                    borderColor: 'rgba(255, 99, 132, 1)',
+                    borderWidth: 1
+                }]
+            },
+            options: {
+                scales: {
+                    y: { beginAtZero: true }
+                }
+            }
+        });
+    </script>
+
+</body>
+</html>
