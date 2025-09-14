@@ -36,4 +36,4 @@ pyscript-project
 
 ## Contributing
 
-Feel free to submit issues or pull requests for improvements or bug fixes.
+Peter, \<peter@hkprog.org>, Hong Kong Programming Society
